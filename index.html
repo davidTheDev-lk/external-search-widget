@@ -9,11 +9,50 @@
     <h1>Dummy Widget Page</h1>
 
     <!-- External Widget -->
-    <div id="search-widget-container-1"></div>
+    <!-- <div id="search-widget-container" style="position: fixed; top: 38%"></div>
+    <link
+      href="https://uat.ohshuexpress.avnlink.co/widget.css"
+      rel="preload"
+      as="style"
+    />
+    <style id="custom-style">
+      .search-body {
+        background-color: f9f9f9;
+        border: 1px solid f9f9f9;
+      }
+    </style>
     <script
       async
-      id="ohshu-widget-script-2"
-      src="https://uat.ohshuexpress.avnlink.com/embed.js?containerId=search-widget-container-1&is_disabled_other_locations=false"
-    ></script>
+      id="ohshu-widget-script"
+      src="https://uat.ohshuexpress.avnlink.co/embed.js?containerId=search-widget-container&is_disabled_other_locations=false"
+    ></script> -->
+
+    <aside id="sidebar" style="position: relative">
+      <!-- <div id="search-widget-container" style="position: fixed; top: 38%"></div> -->
+      <!-- <script async src="http://localhost:3000/embed.js?country=FR&is_pass=true&is_disabled_other_locations=true"></script> -->
+      <!-- <script async src="https://uat.ohshuexpress.avnlink.co/embed.js?station_to=IT:milan&station_from=IT:rome&is_ticket=true&is_disabled_other_locations=false"></script> -->
+
+      <!-- newly added -->
+      <div
+        id="search-widget-container-0"
+        style="position: fixed; top: 38%"
+      ></div>
+      <link
+        href="https://uat.ohshuexpress.avnlink.co/widget.css"
+        rel="preload"
+        as="style"
+      />
+      <style id="custom-style">
+        .sdk-route {
+          background-color: f9f9f9;
+          border-radius: 8px;
+        }
+      </style>
+      <script
+        async
+        id="ohshu-widget-script"
+        src="https://uat.ohshuexpress.avnlink.co/embed.js?containerId=search-widget-container-0&iis_disabled_other_locations=false"
+      ></script>
+    </aside>
   </body>
 </html>
