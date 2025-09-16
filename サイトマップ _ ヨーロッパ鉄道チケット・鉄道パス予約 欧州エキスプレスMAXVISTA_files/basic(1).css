@@ -1,0 +1,769 @@
+/* xxxxxxxxxxxxx About Page xxxxxxxxxxxxxx */
+
+/* ---------- joukensyo ----------- */
+#travelCondition .row{
+	margin:0px 10px 140px;
+}
+#travelCondition article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 10px 50px;
+    font-weight: normal;
+}
+#travelCondition #conditionInner h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+}
+#travelCondition #conditionInner p {
+    padding: 15px 12px 30px;
+    font-size: 13px;
+}
+#travelCondition #conditionInner h4 {
+    font-size: 15px;
+    color: #004679;
+	border-left:2px solid #6e8cb4;
+    padding-left: 10px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 2px;
+}
+#travelCondition .conditionContent{
+	margin: -10px 0px 20px 15px;
+}
+#travelCondition #conditionInner .conditionContent p{
+	padding: 15px 12px 25px;
+}
+#travelCondition #conditionInner p.alertTicket{
+	padding: 5px 12px 5px;
+	background: #b4c8dc;
+	color: #002850;
+	margin: -10px 0px 30px 15px;
+	display: inline-block;
+	font-weight: bold;
+}
+#travelCondition #conditionInner p.alertRailway{
+	padding: 5px 12px 5px;
+	background: #b4c8dc;
+	color: #002850;
+	margin: 35px 0px 5px 10px;
+	font-weight: bold;
+	display: inline-block;
+}
+#travelCondition #conditionInner p.pb10{
+	padding: 15px 12px 10px;
+}
+#travelCondition .searchFirst {
+    margin: -10px auto 50px;
+    text-align: center;
+}
+#travelCondition .btnInner {
+    margin: -10px auto 50px;
+    text-align: center;
+}
+#travelCondition .btnCommon {
+	position: relative;
+	border: 1px solid #002850;
+	padding: 7px 40px 0 20px;
+    color: #FFF;
+    text-align: center;
+	font-size: 1.3rem;
+    display: inline-block;
+	height: 33px;
+    background-color: #002850;
+}
+#travelCondition .btnCommon:before {
+    content: "";
+    display: block;
+    background: url('../../images/about/btn_box_arrow_right.png') no-repeat;
+	position: absolute;
+	right: 15px;
+	top : 50%;
+	margin-top: -7px;
+    width: 14px;
+    height: 14px;
+}
+#travelCondition .tbl table {
+    width: 97%;
+	margin: 0 auto;
+	font-size: 13px;
+}
+#travelCondition .tbl table th, #travelCondition .tbl table td {
+    border: 1px solid #b4b4b4;
+}
+#travelCondition .tbl table th {
+    text-align: center;
+    line-height: 30px;
+}
+#travelCondition .tbl table .secondCol {
+}
+#travelCondition .tbl table td {
+    padding: 15px 0px 11px 10px;
+	vertical-align: middle;
+}
+#travelCondition #conditionInner .conditionContent .tbl p{
+	padding-bottom: 5px;
+}
+#travelCondition .tbl table .thirdCol {
+    width: 50%;
+}
+#travelCondition .tbl table .fourthCol {
+    width: 65%;
+}
+
+#travelCondition #conditionInner ul {
+    padding: 15px 12px 30px;
+    font-size: 13px;
+}
+#travelCondition #conditionInner ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+}
+#travelCondition #conditionInner ul.em10 {
+    padding: 0 12px 10px;
+    font-size: 13px;
+}
+#travelCondition #conditionInner ul.em10 li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+#travelCondition #conditionInner .indent {
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+/* ---------- company ----------- */
+#company .row{
+	margin:0px 10px 140px;
+}
+#company article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 10px 50px;
+    font-weight: normal;
+}
+#company .tbl {
+    width: 100%;
+    border-top: 1px solid #ccc;
+	margin: 0 auto 10px;
+}
+#company table{
+    vertical-align: inherit;
+	font-size: 13px;
+}
+#company .tbl th, #company .tbl td {
+    border-bottom: 1px solid #ccc;
+    padding: 2% 3%;
+}
+#company .tbl th {
+    width: 18%;
+    background: #f0f0eb;
+    white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+}
+#company .tbl td {
+    background-color: #fff;
+    text-align: left;
+}
+#company .tbl td p{
+	border-bottom: 1px solid #ccc;
+    width: 107%;
+    padding-bottom: 2%;
+    margin-left: -23px;
+    padding-left: 3%;
+}
+#company .tbl td img{
+	margin-right: 20px;
+}
+#company .tbl td .imgBox+.imgBox{
+    margin-top: 10px;
+}
+/* ---------- link ----------- */
+#link .row{
+	margin:0px 50px 140px;
+}
+#link ul.listBox{
+	margin-top: 20px;
+}
+#link ul.listBox li{
+	height: 80px;
+	text-align: center;
+}
+#link ul.listBox li p{
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: left;
+}
+#link .article_link_box:hover{
+	opacity: 0.7;
+}
+/* ---------- link ----------- */
+#privacyPolicy .row{
+	margin:0px 10px 140px;
+}
+#privacyPolicy article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 20px 50px;
+    font-weight: normal;
+}
+#privacyPolicy #conditionInner h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+}
+#privacyPolicy #conditionInner p {
+    padding: 15px 12px 30px;
+    font-size: 13px;
+}
+#privacyPolicy #conditionInner h4 {
+    font-size: 15px;
+    color: #004679;
+	border-left:2px solid #6e8cb4;
+    padding-left: 10px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 2px;
+}
+/* ---------- recruit ----------- */
+#recruit .row{
+	margin:0px 10px 140px;
+}
+#recruit article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 20px 50px;
+    font-weight: normal;
+}
+#recruit .row section h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+	margin-bottom: 20px;
+}
+#recruit .tbl {
+    width: 97%;
+    border-top: 1px solid #ccc;
+	margin: 0 auto 10px;
+}
+#recruit table{
+    vertical-align: inherit;
+	font-size: 13px;
+}
+#recruit .tbl th {
+    border-bottom: 1px solid #ccc;
+    padding: 2% 3%;
+}
+ #recruit .tbl td {
+    border-bottom: 1px solid #ccc;
+    padding: 2% 0 2% 3%;
+}
+
+#recruit .tbl th {
+    background: #f0f0eb;
+    white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+}
+#recruit .tbl td {
+    background-color: #fff;
+    text-align: left;
+}
+#recruit .tbl td p{
+	border-bottom: 1px solid #ccc;
+    width: 107%;
+    padding-bottom: 2%;
+    margin-left: -23px;
+    padding-left: 3%;
+}
+
+
+.jobList_photoBox img{
+    width: 138px !important;
+    float: right;
+    margin-right: 5px;
+}
+
+
+/* ---------- siteMap ----------- */
+#siteMap .row{
+	margin:0px 10px 140px;
+}
+#siteMap article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 20px 50px;
+    font-weight: normal;
+}
+#siteMap #sitemapInner h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+	margin-top: 20px;
+}
+#siteMap #sitemapInner p {
+    padding: 15px 12px 30px;
+    font-size: 13px;
+}
+#siteMap #sitemapInner li{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#siteMap .europaSections1, #siteMap .europaSections2{
+    padding: 10px 10px 10px;
+    margin: 5px 5px 0px 0px;
+}
+#siteMap #sitemapInner .europaSections1 h3, #siteMap #sitemapInner .europaSections2 h3{
+    font-size: 15px;
+    font-size: 1.5rem;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    color: #232323;
+    background: url('../../images/about/bg_sitemap_ttl_arrow.png') center left no-repeat;
+	margin-top: 0px;
+}
+#siteMap #sitemapInner .europaSections2 h4{
+    font-size: 13px;
+    font-size: 1.3rem;
+    margin-left: 30px;
+    padding: 2px 0px 0px 8px;
+    color: #646464;
+    border-left: 2px solid #002850;
+	margin-top: 10px;
+}
+#siteMap .europaSections1 ul {
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 7px;
+    font-size: 13px;
+    font-size: 1.3rem;
+	padding-left: 28px;
+	padding-right: 7px;
+}
+#siteMap .europaSections2 ul {
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 7px;
+    font-size: 13px;
+    font-size: 1.3rem;
+	padding-left: 38px;	
+}
+#siteMap .europaSections1 ul:last-of-type, #siteMap .europaSections2 ul:last-of-type{
+	padding-right: 0px;
+}
+#siteMap .europaSections1 ul li, #siteMap .europaSections2 ul li{
+    margin-bottom: 5px;
+}
+#siteMap .europaSections1 ul .icon, #siteMap .europaSections2 ul .icon{
+    vertical-align: middle;
+    margin-top: -2px;
+	width: 13px;
+    height: 13px;
+	background: url('../../images/about/bg_sitemap_arrow.png') center left no-repeat;
+    overflow: hidden;
+}
+#siteMap #sitemapInner1 h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+	margin-top: 20px;
+}
+#siteMap #sitemapInner1 ul{
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 7px;
+    font-size: 13px;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    margin: 10px 5px 20px 0px;
+    width: 45%;
+}
+#siteMap #sitemapInner1 ul li{
+	margin-bottom: 5px;
+}
+#siteMap #sitemapInner1 ul .icon{
+    vertical-align: middle;
+    margin-top: -2px;
+	width: 13px;
+    height: 13px;
+	background: url('../../images/about/bg_sitemap_arrow.png') center left no-repeat;
+    overflow: hidden;
+}
+/* ---------- soudan_daiko ----------- */
+#travelContract .row{
+	margin:0px 10px 140px;
+}
+#travelContract article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 10px 30px;
+    font-weight: normal;
+}
+#travelContract #contractInner h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+	margin: 20px 0px 0px;
+}
+#travelContract #contractInner h4{
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    padding: 5px 0px 2px 8px;
+    color: #002850;
+    border-left: 2px solid #6e8cb4;
+	margin: 20px 0px 0px 10px;
+}
+#travelContract #contractInner dl{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 0px 20px;
+	margin: 20px 0px 25px;
+	overflow: hidden;
+}
+#travelContract #contractInner dt{
+	margin-right: 7px;
+	width: 10px;
+	float: left;
+}
+
+#travelContract #contractInner dd{
+	width: 97%;
+	float: left;
+}
+#travelContract #contractInner p{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 0px 20px;
+	margin: 20px 0px 25px;
+}
+/* ---------- yakkan ----------- */
+#travelAgreement .row{
+	margin:0px 10px 140px;
+}
+#travelAgreement article header p{
+    font-size: 13px;
+    color: #232323;
+    margin: 15px 10px;
+    font-weight: normal;
+}
+#travelAgreement article header ul{
+    padding: 0 10px 50px;
+}
+    #travelAgreement article header li{
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        padding-right: 15px;
+    }
+    #travelAgreement article header li a{
+        font-size: 13px;
+        display: block;
+        background: url("/images/icons/link_arrow_circle_blue_bg.png") 0 0 no-repeat;
+        height: 15px;
+        padding-left: 20px;
+    }
+#travelAgreement #agreementInner h3 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #a09682;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 2px;
+}
+#travelAgreement #agreementInner h4{
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    padding: 5px 0px 2px 8px;
+    color: #002850;
+    border-left: 2px solid #6e8cb4;
+	margin: 20px 0px 0px 10px;
+}
+#travelAgreement #agreementInner dl{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 0px 20px;
+	margin: 20px 0px 25px;
+	overflow: hidden;
+}
+#travelAgreement #agreementInner dt{
+	margin-right: 7px;
+	width: 10px;
+	float: left;
+}
+#travelAgreement #agreementInner dd{
+	width: 97%;
+	float: left;
+}
+#travelAgreement #agreementInner dl.w18{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 0px 20px;
+	margin: 20px 0px 25px;
+	overflow: hidden;
+}
+#travelAgreement #agreementInner dl.w18 dt{
+	margin-right: 7px;
+	width: 18px;
+	float: left;
+}
+#travelAgreement #agreementInner dl.w18 dd{
+	width: 95%;
+	float: left;
+}
+#travelAgreement #agreementInner p{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 0px 20px;
+	margin: 20px 0px 25px;
+}
+#travelAgreement #agreementInner p.complaint{
+	font-size: 13px;
+	font-size: 1.3rem;
+	padding: 20px;
+	margin: 20px 20px 25px;
+	border: 1px solid #b4b4b4;
+}
+#travelAgreement .tbl{
+	margin: 20px 20px 25px;
+}
+#travelAgreement .tbl table tr td{
+	border:1px solid #b4b4b4;
+	vertical-align: middle;
+	padding: 12px 10px; 
+	font-size: 13px;
+	font-size: 1.3rem;
+	}
+#travelAgreement .tbl table .fistCol{
+	width:40px;
+	padding: 10px 0px;
+	text-align: center;
+	}
+#travelAgreement .tbl table .secondCol{
+	width:455px;}
+#travelAgreement .tbl table .thirdCol{
+	width:167px;}
+
+/***/
+    #travelAgreement #mainArticleBox section>h2{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 20px;
+    padding: 6px 10px 2px;
+    margin: 10px 0;
+    color: #002850;
+    border: 1px solid #6e8cb4;
+    }
+
+/* ---------- QandA ----------- */
+#questionAnswer .row{
+	margin:0px 10px 140px;
+}
+#questionAnswer #mainArticleBox > header h1 i {
+    background: url('../../images/about/bg_ttl_qa.png') 0px 0px no-repeat;
+    padding: 0 20px;
+}
+#questionTopcontent{
+	padding: 10px 15px;
+    margin: 20px 0px;
+    background-color: #002850;
+    height: 50px;
+    border-radius: 10px;
+}
+/*
+#questionTopcontent h2 {
+    border-left: 2px solid #6e8cb4;
+    background: url('../../images/about/btn_box_arrow.png') right center no-repeat;
+    padding: 3px 10px 0px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFF;
+    background-size: 40px;
+}
+*/
+#questionAnswer .questionInner{
+    margin-top: 30px;
+    border: 1px solid #AAAAA5;
+    padding: 15px 20px 0px 20px;
+    border-radius: 10px;
+}
+#questionAnswer h2 a.active{
+    position: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    color: #002850;
+    background:inherit;
+    border-left: 2px solid #6E8CB4;
+    padding-left: 10px;
+	padding-top: 2px;
+    height: 28px;
+    margin-bottom: 15px;
+    border-radius:0;
+}
+
+#questionAnswer h2 a:before {
+    content: "";
+    display: block;
+    border-left: 4px solid #6e8cb4;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+}
+#questionAnswer h2 a.active:before{
+    content: "";
+    display: block;
+    border-left: none;
+}
+
+#questionAnswer h2 a:after {
+    content: "";
+    display: block;
+    background: url('../../images/about/btn_box_arrow.png') right center no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-size: 40px;
+    left: 670px;
+    top: 10px;
+}
+
+#questionAnswer h2 a{
+	display: block;
+	margin: 20px 0 0 0;
+    font-size: 20px;
+    font-size: 2rem;
+    color: #FAFBFC;
+    background: #002850;
+    border-radius: 8px;
+    padding: 12px 20px 10px 33px;
+    position: relative;
+}
+#questionAnswer h2:last-child a {
+	margin-bottom: 50px;
+}
+#questionAnswer .questionInner h3 {
+	margin-bottom: 16px;
+	font-size: 20px;
+	font-size: 2rem;
+	font-weight: bold;
+	padding-left: 12px;
+	color: #002850;
+	border-left: 4px solid #6e8cb4;
+}
+#questionAnswer .questionInner h4{
+    padding: 22px 37px 20px 0px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 0px;
+    border: inherit;
+    background: inherit;
+    color: #232323;
+    border-top: 1px dashed #969696;
+    font-weight: bold;
+	background: url('../../images/about/bg_plus.png') 645px 19px no-repeat;
+    line-height: 1.7;
+    border-radius: 0;
+}
+#questionAnswer .questionInner h4.ui-state-active{
+	background: url('../../images/about/bg_minus.png') 645px 19px no-repeat;
+}
+/*
+#questionAnswer .questionInner h4:before{
+	content: '';
+    background: url('../images/about/bg_question.png') left center no-repeat;
+    position: absolute;
+    width: 31px;
+    height: 50px;
+    margin-left: -34px;
+	margin-top: -17px;
+}
+*/
+#questionAnswer .questionInner h4 i{
+    background: url('../../images/about/bg_question.png') 0px 0px no-repeat;
+    width: 35px;
+    height: 40px;
+    float: left;
+    margin-top: -4px;
+    margin-left: 10px;
+    margin-right: 3px;
+}
+/*
+#questionAnswer .questionInner h4:after{
+	content: '';
+    background: url('../images/about/bg_plus.png') center no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left: 226px;
+}
+#questionAnswer .questionInner h4.ui-state-active:after{
+	content: '';
+    background: url('../images/about/bg_minus.png') center no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left: 226px;
+}
+*/
+#questionAnswer .answerOpen{
+	border: none;
+	padding: 0px 10px 10px 10px;
+	font-size: 13px;
+	overflow: hidden;
+}
+#questionAnswer .answerOpen dt{
+	 background: url('../../images/about/bg_answer.png') center no-repeat;
+	 width: 30px;
+	 height: 30px;
+	 text-indent: -9999px;
+	 float: left;
+}
+#questionAnswer .answerOpen dd{
+	margin-left: 45px;
+    padding-right: 10px;
+	line-height: 1.7;
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    position: absolute;
+    left: .6em;
+    top: 50%;
+    margin-top: -9px;
+    background: none;
+}
+#questionAnswer .ui-state-hover{
+    top: 0 !important;
+    right: 0 !important;
+    opacity: 0.7;
+}

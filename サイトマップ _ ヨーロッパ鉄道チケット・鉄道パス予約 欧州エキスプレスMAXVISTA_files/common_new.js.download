@@ -1,0 +1,407 @@
+$(function(){
+
+$(window).on('load', function(){
+  var myPath = location.href;
+  if ( myPath.indexOf('/com/euro/') != -1) {
+    $("#gnav-euro").addClass("gnav-currentDefault");
+  }else if( myPath.indexOf('com/tourist-spots/') != -1 ){
+    $("#gnav-spot").addClass("gnav-currentDefault");
+  }else if( myPath.indexOf('com/usa-can/') != -1 ){
+    $("#gnav-usa-can").addClass("gnav-currentDefault");
+      if ( myPath.indexOf('/usa-can/via') != -1) {
+         //$("#side-traiSearchBox .searchTitle>span").text("VIAレイル");
+         $("#side-traiSearchBox").addClass("viarail");
+      }
+  }else if( myPath.indexOf('com/asi-oce/') != -1 ){
+      $("#gnav-asi-oce").addClass("gnav-currentDefault");
+  }else if( myPath.indexOf('com/parts/') != -1 ){
+      $("#gnav-travelParts").addClass("gnav-currentDefault");
+  }else if( myPath.indexOf('com/executive/') != -1 ){
+      $("#gnav-executive").addClass("gnav-currentDefault");
+  }else{
+      if ( myPath == "/" ||  myPath == "/index.html") {
+        $("#gnav-home").addClass("gnav-currentDefault");
+      }
+  }//if
+  //header small and scroll 読み込み時のスムーススクロール
+  var myHash = location.hash;
+  if(myHash != ""){
+  var position = $(myHash).offset().top-100;      // 移動先を数値で取得
+  $('body,html').animate({scrollTop:position}, 100, 'swing');      // スムーススクロール
+  }
+  //global header nav
+});// end load
+
+
+
+//header small and scroll
+$(window).on('load scroll', function(){
+    if ($(window).scrollTop() > 18) {
+    $('#header').addClass('header-small');
+    $('body').css('paddingTop','148px');
+    } else if($(window).scrollTop() < 17){
+    $('#header').removeClass('header-small');
+    $('body').css('paddingTop','140px');
+    }
+});//load scroll
+
+
+//to page top
+$(window).scroll(function(){
+//最上部から現在位置までの距離を取得して、変数[now]に格納
+var now = $(window).scrollTop();
+  if(now > 300){
+  //[#page-top]をゆっくりフェードインする
+  $('#page-top').fadeIn('slow');
+  //それ以外だったらフェードアウトする
+  }else{
+  $('#page-top').fadeOut('slow');
+  }//if
+});//scrl
+$('#move-page-top').click(function(){
+  $('html,body').animate({scrollTop:0},'slow');
+});//click
+
+// 駅名入力補完
+$( "#F0" ).autocomplete({
+source: "/ecs/city_search",minLength: 2,width: 380
+});
+$( "#T0" ).autocomplete({
+source: "/ecs/city_search",minLength: 2,width: 380
+});
+$( "#F1" ).autocomplete({
+source: "/ecs/city_search",minLength: 2,width: 380
+});
+$( "#T1" ).autocomplete({
+source: "/ecs/city_search",minLength: 2,width: 380
+});
+///////////////
+
+//? Query if
+var myQuery = getUrlVars();
+if(myQuery["Passck"]){
+//?Passck=on の場合 サイドバーにon
+  if(myQuery["Passck"]=="on"){
+    $("#path_fld_btn").prop("checked",true);
+  }
+}//endif
+//pass holder hantei
+$(".PassckOn").on("click",function(){
+  $("#path_fld_btn").prop("checked",true);
+  return false;
+});//on
+
+//isset sidebar
+if($('#sidebar').length){
+  //is subpage
+  $('#side-traiSearchBox_wrap').fitSidebar({ wrapper : '.main__subPages' });
+}
+
+//smooth scroll
+// #で始まるアンカーをクリックした場合に処理
+$('a[href^=#]').on("click",function() {
+	var speed = 400; // ミリ秒       // スクロールの速度
+	var href= $(this).attr("href");      // アンカーの値取得
+	var target = $(href == "#" || href == "" ? 'html' : href);      // 移動先を取得
+	var position = target.offset().top-100;      // 移動先を数値で取得
+	$('body,html').animate({scrollTop:position}, speed, 'swing');      // スムーススクロール
+	return false;
+});
+
+//nav mega drop down
+$('.megaDropDown').on("mouseover",function(){
+  $(this).find("a,span").addClass("gnav-current").next(".megaDropDown-Box").stop().show();
+});
+$('.megaDropDown').on("mouseout",function(){
+  $(this).find("a,span").removeClass("gnav-current").next(".megaDropDown-Box").stop().hide();
+});
+
+//Gmap window link
+$(".gmapBox").on("click","a",function(){
+var speed = 400; // ミリ秒       // スクロールの速度
+var href= $(this).attr("href");      // アンカーの値取得
+var target = $(href == "#" || href == "" ? 'html' : href);      // 移動先を取得
+var position = target.offset().top-100;      // 移動先を数値で取得
+$('body,html').animate({scrollTop:position}, speed, 'swing');      // スムーススクロール
+return false;
+});
+
+//.popUp
+$("a.popUp,.popUpWindow").click(function(){
+    window.open(this.href,"ohs_window","width=740,height=800,resizable=yes,scrollbars=yes");
+    return false;
+});
+$(".popUpWindow-wide").click(function(){
+    window.open(this.href,"ohs_window","width=880,height=800,resizable=yes,scrollbars=yes");
+    return false;
+});
+
+////////DatePicker
+// 2019 年末対応
+var now = new Date();
+// 本番日付コード
+if(now.getTime() >= new Date("2019-12-27T12:00:00+0900") && now.getTime() < new Date("2020-01-06T09:59:59+0900").getTime()) {
+  //ここで出発できなくする日を指定
+  var target_days = [
+    '2019-12-27',
+    '2019-12-28',
+    '2019-12-29',
+    '2019-12-30',
+    '2019-12-31',
+    '2020-01-01',
+    '2020-01-02',
+    '2020-01-03',
+    '2020-01-04',
+    '2020-01-05',
+    '2020-01-06',
+    '2020-01-07',
+    '2020-01-08',
+  ];
+}else {
+  // 現在の日付より前にすること！
+  var target_days = [
+     //'2019-01-01',
+  ];
+}
+
+$(".datepicker").datepicker({
+  showOn: "both",
+  buttonImage: "/images/_common/icon-cal.png",
+  buttonImageOnly: true,
+  dateFormat:"yy年 mm月 dd日（DD）",
+  yearSuffix: '年',
+  numberOfMonths: [1,3],      // ２ヶ月分を表示
+  showMonthAfterYear: true,
+  monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+  dayNames: ['日', '月', '火', '水', '木', '金', '土'],
+  dayNamesMin: ['日', '月', '火', '水', '木', '金', '土'],
+  minDate: new Date(),
+  hideIfNoPrevNext: true,
+  altField: ".date-pic-alternate",
+  altFormat: "yy-mm-dd",
+  beforeShowDay: function (day) {
+    yymmdd = $.datepicker.formatDate('yy-mm-dd', day);
+    if ($.inArray(yymmdd, target_days) == -1) {
+      return [true, ""];
+    }
+    else {
+      return [false, ""];
+    }
+  }
+});
+$(".datepicker" ).on("change",function(){
+  Cookies.set('SRCH_CKE_datepicker', $(this).val(), {path:'/'});
+  Cookies.set('SRCH_CKE_dateAlternate', $(this).val(), {path:'/'});
+  var DatePicTxt = $(".date-pic-alternate").val();
+  var DatePicArry = DatePicTxt.split("-");
+  $("#y0").val(DatePicArry[0]);
+    Cookies.set('SRCH_CKE_y0', DatePicArry[0], {path:'/'});
+  $("#m0").val(DatePicArry[1]);
+    Cookies.set('SRCH_CKE_m0', DatePicArry[1], {path:'/'});
+  $("#d0").val(DatePicArry[2]);
+    Cookies.set('SRCH_CKE_d0', DatePicArry[2], {path:'/'});
+})//hidden input
+//hour shet
+$('select[name="hf0"]').on("change",function(){
+  var newht0 = $(this).val()*1+6;
+  newht0 = ("0" + newht0).slice(-2);
+      if(newht0<24){
+          $('select[name="ht0"]').val(newht0);
+      }else{
+          $('select[name="ht0"]').val('23');
+          $('select[name="nt0"]').val('59');
+      }
+})//ed hour
+
+//////// FORM //////// //////// COOKIE form Input
+//$('#F0') //出発
+  // $('#F0').on("change",function(){
+  // Cookies.set('SRCH_CKE_F0', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_F0')){ $("#F0").val(Cookies.get('SRCH_CKE_F0'));}//isset
+//$('#T0') //到着
+  // $('#T0').on("change",function(){
+  // Cookies.set('SRCH_CKE_T0', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_T0')){ $("#T0").val(Cookies.get('SRCH_CKE_T0'));}//isset
+//$('.trainsearch-Box .datepicker') datepicker funcで処理
+  if(Cookies.get('SRCH_CKE_datepicker')){
+  $(".trainsearch-Box .datepicker").val(Cookies.get('SRCH_CKE_datepicker'));
+//$('#home-traiSearchBox .date-pic-alternate') //$('#y0') //hidden yearz  //$('#m0') //hidden month  //$('#d0') //hidden day
+      $(".trainsearch-Box .date-pic-alternate").val(Cookies.get('SRCH_CKE_dateAlternate'));
+      $("#y0").val(Cookies.get('SRCH_CKE_y0'));
+      $("#m0").val(Cookies.get('SRCH_CKE_m0'));
+      $("#d0").val(Cookies.get('SRCH_CKE_d0'));
+  }//isset
+//$('.trainsearch-Box select[name="hf0"]') //出発時
+  $('.trainsearch-Box select[name="hf0"],.trainsearch-Box select[name="nf0"],.trainsearch-Box select[name="ht0"],.trainsearch-Box select[name="nt0"]').on("change",function(){
+  Cookies.set('SRCH_CKE_hf0', $('select[name="hf0"]').val(), {path:'/'});
+  Cookies.set('SRCH_CKE_nf0', $('select[name="nf0"]').val(), {path:'/'});
+  Cookies.set('SRCH_CKE_ht0', $('select[name="ht0"]').val(), {path:'/'});
+  Cookies.set('SRCH_CKE_nt0', $('select[name="nt0"]').val(), {path:'/'});
+  });//
+  if(Cookies.get('SRCH_CKE_hf0')){
+  $('select[name="hf0"]').val(Cookies.get('SRCH_CKE_hf0'));
+  $('select[name="nf0"]').val(Cookies.get('SRCH_CKE_nf0'));
+  $('select[name="ht0"]').val(Cookies.get('SRCH_CKE_ht0'));
+  $('select[name="nt0"]').val(Cookies.get('SRCH_CKE_nt0'));
+  }//isset
+//$('select[name="nA"]') //大人
+  $('select[name="nA"]').on("change",function(){Cookies.set('SRCH_CKE_nA', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_nA')){ $('select[name="nA"]').val(Cookies.get('SRCH_CKE_nA'));}//isset
+//$('select[name="nC"]')　//子供
+  $('select[name="nC"]').on("change",function(){Cookies.set('SRCH_CKE_nC', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_nC')){ $('select[name="nC"]').val(Cookies.get('SRCH_CKE_nC'));}//isset
+//$('select[name="nY"]') //ユース
+  $('select[name="nY"]').on("change",function(){Cookies.set('SRCH_CKE_nY', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_nY')){ $('select[name="nY"]').val(Cookies.get('SRCH_CKE_nY'));}//isset
+//$('select[name="nS"]')　//シニア
+  $('select[name="nS"]').on("change",function(){Cookies.set('SRCH_CKE_nS', $(this).val(), {path:'/'}); });//
+  if(Cookies.get('SRCH_CKE_nS')){ $('select[name="nS"]').val(Cookies.get('SRCH_CKE_nS'));}//isset
+//$('#path_fld_btn')
+  $('#path_fld_btn').on("change",function(){
+    if($('#path_fld_btn').is(':checked')){
+          Cookies.set('SRCH_CKE_path_fld', $(this).val(), {path:'/'});
+    }else{
+      $(this).val("0");
+      Cookies.set('SRCH_CKE_path_fld', 0 , {path:'/'}); }
+  });//
+  if(Cookies.get('SRCH_CKE_path_fld')=="1"){ $('#path_fld_btn').prop("checked","checked");}//isset
+//出発地到着地入れ換え
+var mySearchFocus = "0";
+$(".search_condition_btn-st_change").on("click",function(){
+    var myF0 = $("#F0").val();
+    var myT0 = $("#T0").val();
+    // Cookies.set('SRCH_CKE_F0', myT0, {path:'/'});
+    // Cookies.set('SRCH_CKE_T0', myF0, {path:'/'});
+    $("#F0").focus().val(myT0);
+    $("#T0").focus().val(myF0);
+})//ed
+
+var pkpkChk = 0;
+//pikapika
+    $('#F0,#T0').gpObserveText();//監視jq
+    //手入力では非発光、自動入力で発光
+    $('#F0,#T0').on("focus",function(){mySearchFocus++;});
+    $('#F0,#T0').on("blur",function(){mySearchFocus = 0;});
+    $("#home-traiSearchBox_new #F0,#home-traiSearchBox_new #T0").on("textchange",function(){
+        Cookies.set('SRCH_CKE_F0', $("#F0").val(), {path:'/'});
+        Cookies.set('SRCH_CKE_T0', $("#T0").val(), {path:'/'});
+    });
+    $("#side-traiSearchBox #F0,#side-traiSearchBox #T0").on("textchange",function(){
+        if(mySearchFocus == 0 ){
+
+          if(pkpkChk == 0){
+              sideSearchHighLight();
+          }else{
+              pkpkChk = 0
+          }
+
+        mySearchFocus = 0;
+        Cookies.set('SRCH_CKE_F0', $("#F0").val(), {path:'/'});
+        Cookies.set('SRCH_CKE_T0', $("#T0").val(), {path:'/'});
+        }else{
+        Cookies.set('SRCH_CKE_F0', $("#F0").val(), {path:'/'});
+        Cookies.set('SRCH_CKE_T0', $("#T0").val(), {path:'/'});
+        }
+    });
+////////////pikapika function
+function sideSearchHighLight(){
+$('#side-traiSearchBox').delay(300).queue(function() {
+    $(this).addClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(500).queue(function() {
+    $(this).removeClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(550).queue(function() {
+    $(this).addClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(600).queue(function() {
+    $(this).removeClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(650).queue(function() {
+    $(this).addClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(700).queue(function() {
+    $(this).removeClass('highLight').dequeue();});
+$('#side-traiSearchBox').delay(100).queue(function() {
+    $(this).removeClass('highLight').dequeue();});//2nd
+return pkpkChk++;
+}///////
+/////end form
+
+////////////////sub page
+function sideFixedInputStation(){
+//サイドバー固定の場合にスクロールトップ sideFixedInputStation()
+    if($('.fit-sidebar-no-fixed-now').length){
+    var position = $("#side-traiSearchBox").offset().top-100;      // 移動先を数値で取得
+    $('body,html').animate({scrollTop:position,scrollLeft:0}, 300, 'swing');      // スムーススクロール
+    }
+}
+
+//input station
+$("a[data-stationName]").on("click",function(){
+sideFixedInputStation();//サイドバー固定の場合にスクロールトップ
+  var myStation = $(this).attr("data-stationName");
+  $("input[name='F0']").val(myStation);
+    if($(this).attr("data-stationName2")){
+        var myStation2 = $(this).attr("data-stationName2");
+        $("input[name='T0']").val(myStation2);
+    }
+sideSearchHighLight();//160707
+return false;
+});//on
+
+//toMAP
+$(".country-guideBox .article_innerBtn_box_toMap a").on("click",function(){
+var myMapWrapTop = $(this).closest(".country-guideBox").find(".gmapBox_wrap").offset().top-100;
+  $('body,html').animate({scrollTop:myMapWrapTop}, 'slow');
+  return false;
+});//on
+
+
+});//jq
+///
+function searchHighLight(){
+var myBdClr = $("#side-traiSearchBox");
+  if(myBdClr.css("borderColor") == "red"){
+      myBdClr.css("borderColor","blue");
+  }else{
+      myBdClr.css("borderColor","red");
+  }
+};
+/*FUNCTIONS*/
+//search submit
+function searchSubmit(){
+  if(document.getElementById('F0').value == ""){
+    alert('出発地を入力してください。');
+  }else if(document.getElementById('T0').value == ""){
+    alert('到着地を入力してください。');
+  }else if(document.getElementById('F0').value == document.getElementById('T0').value){
+        alert('出発地と到着地が同じです。');
+  }else if(
+    document.getElementById('y0').value == "0"
+    || document.getElementById('m0').value == "0"
+    || document.getElementById('d0').value == "0"
+  ){
+    alert('乗車日を選択して下さい。');
+  }else if(
+    document.getElementById('nA').value == "0"
+    && document.getElementById('nC').value == "0"
+    && document.getElementById('nY').value == "0"
+    && document.getElementById('nS').value == "0"
+  ){
+    alert('人数を入力してください。');
+  }else{
+    document.form1.submit();
+  }
+}
+/* var myVal = getUrlVars(); URL解析して、クエリ文字列を返す @returns {Array} クエリ文字列  */
+function getUrlVars()
+{
+    var vars = [], max = 0, hash = "", array = "";
+    var url = window.location.search;
+    //?を取り除くため、1から始める。複数のクエリ文字列に対応するため、&で区切る
+    hash  = url.slice(1).split('&');
+    max = hash.length;
+    for (var i = 0; i < max; i++) {
+        array = hash[i].split('=');    //keyと値に分割。
+        vars.push(array[0]);    //末尾にクエリ文字列のkeyを挿入。
+        vars[array[0]] = array[1];    //先ほど確保したkeyに、値を代入。
+    }
+    return vars;
+}
+/////////////
